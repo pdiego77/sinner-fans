@@ -3,74 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sinner Fans Italia | Home</title>
+    <title>Sinner Fans Italia | Official Fan Page</title>
     <style>
-        /* CSS: Qui decidiamo lo stile */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
+        /* Stili Generali */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; background-color: #f0f2f5; color: #1c1e21; }
+        
+        /* Header Dinamico */
+        header { 
+            background: linear-gradient(135deg, #e63946 0%, #d62828 100%); 
+            color: white; 
+            padding: 60px 20px; 
+            text-align: center; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        header {
-            background-color: #e63946; /* Rosso sportivo */
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 5px solid #ffb703; /* Arancione Carota Boys */
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: white;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            border-radius: 8px;
-        }
-        .ranking-badge {
-            display: inline-block;
+
+        .container { max-width: 900px; margin: -40px auto 40px; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+
+        /* Badge Ranking */
+        .ranking-card {
             background: #1d3557;
-            color: white;
-            padding: 10px 20px;
+            color: #f1faee;
+            display: inline-block;
+            padding: 15px 30px;
             border-radius: 50px;
+            font-size: 1.2rem;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            border: 3px solid #ffb703;
         }
-        h2 { color: #e63946; }
-        .next-match {
-            border-left: 5px solid #ffb703;
-            padding-left: 15px;
-            background: #fff3e0;
-            padding: 10px;
+
+        /* Tabella Palmarès */
+        .trophy-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
         }
+        .trophy-table th, .trophy-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .trophy-table th { background-color: #f8f9fa; color: #e63946; }
+
+        /* Galleria Immagini Semplice */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .gallery img:hover { transform: scale(1.05); }
+
+        footer { text-align: center; padding: 20px; color: #888; font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>SINNER FANS ITALIA</h1>
-    <p>Il punto di riferimento per i tifosi di Jannik</p>
+    <p>Sostieniamo insieme il numero 1 del tennis mondiale</p>
 </header>
 
 <div class="container">
-    <div class="ranking-badge">ATP Ranking: #1</div>
+    <center><div class="ranking-card">ATP RANKING: #1 🇮🇹</div></center>
     
-    <h2>Ultima Notizia</h2>
-    <p>Jannik Sinner domina il campo e si prepara per la prossima sfida. La determinazione del campione altoatesino non finisce mai di stupire!</p>
+    <h2>🏆 Palmarès di Jannik</h2>
+    <table class="trophy-table">
+        <thead>
+            <tr>
+                <th>Anno</th>
+                <th>Torneo</th>
+                <th>Categoria</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2024</td>
+                <td>Australian Open</td>
+                <td>Grand Slam</td>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>US Open</td>
+                <td>Grand Slam</td>
+            </tr>
+            <tr>
+                <td>2024</td>
+                <td>Miami Open</td>
+                <td>Masters 1000</td>
+            </tr>
+            <tr>
+                <td>2023</td>
+                <td>Coppa Davis</td>
+                <td>Nazionale</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <div class="next-match">
-        <h3>Prossimo Incontro</h3>
-        <p><strong>Torneo:</strong> Indian Wells</p>
-        <p><strong>Avversario:</strong> Da definire</p>
+    <h2>📸 Gallery</h2>
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1592709823125-a191f07a2a5e?auto=format&fit=crop&q=80&w=500" alt="Tennis">
+        <img src="https://images.unsplash.com/photo-1622279457486-62dcc4a497c8?auto=format&fit=crop&q=80&w=500" alt="Campo">
+        <img src="https://images.unsplash.com/photo-1554068865-24cecd4e34b8?auto=format&fit=crop&q=80&w=500" alt="Racchetta">
     </div>
-
-    <h2>Palmarès Recente</h2>
-    <ul>
-        <li>Australian Open 2024 🏆</li>
-        <li>ATP Rotterdam 2024 🏆</li>
-        <li>Miami Open 2024 🏆</li>
-    </ul>
 </div>
+
+<footer>
+    <p>&copy; 2024 Sinner Fans Italia - Creato con passione da un tifoso</p>
+</footer>
 
 </body>
 </html>
