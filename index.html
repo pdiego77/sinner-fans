@@ -13,39 +13,38 @@
   <meta property="og:title" content="Diego Tennis Edit">
   <meta property="og:description" content="Analisi, highlights ed edit dedicati a Jannik Sinner e al tennis ATP.">
 
-  <style>
+<style>
     :root {
-  --bg-color: #111111;        /* Sfondo scuro per far risaltare l'arancione */
-  --card-bg: #1e1e1e;      /* Sfondo delle schede */
-  --text-color: #ffffff;     /* Testo Bianco brillante */
-  --accent-color: #ff6b00;   /* Arancione Sinner vivace */
-  --accent-hover: #e05e00;   /* Arancione leggermente più scuro per i passaggi del mouse */
-}
+      --bg-color: #111111;       /* Sfondo scuro */
+      --card-bg: #1e1e1e;     /* Schede */
+      --text-color: #ffffff;    /* Testo Bianco */
+      --accent-color: #ff6b00;  /* Arancione Sinner */
+    }
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-color) !important;
+      color: var(--text-color) !important;
       line-height: 1.6;
     }
 
     header {
       text-align: center;
       padding: 40px 20px;
-      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-      border-bottom: 1px solid #334155;
+      background: linear-gradient(180deg, #1e1e1e 0%, #111111 100%) !important;
+      border-bottom: 2px solid var(--accent-color) !important;
     }
 
     header h1 {
       margin: 0;
       font-size: 2.5rem;
-      color: var(--accent-color);
+      color: var(--accent-color) !important;
     }
 
     header p {
       margin-top: 8px;
-      color: #94a3b8;
+      color: #ffffff !important;
     }
 
     .container {
@@ -58,50 +57,33 @@
       font-size: 1.8rem;
       margin-top: 40px;
       margin-bottom: 20px;
-      border-left: 4px solid var(--accent-color);
+      border-left: 4px solid var(--accent-color) !important;
       padding-left: 12px;
+      color: #ffffff !important;
     }
 
-    /* Griglie Video e Shorts */
     .video-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
     }
 
-    .shorts-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-    }
-
     .video-card {
-      background: var(--card-bg);
+      background: var(--card-bg) !important;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: transform 0.2s;
-    }
-
-    .video-card:hover {
-      transform: translateY(-4px);
+      border: 1px solid #333;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     }
 
     .video-wrapper {
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 */
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
     }
 
-    .shorts-wrapper {
-      position: relative;
-      padding-bottom: 177.77%; /* 9:16 Verticale */
-      height: 0;
-      overflow: hidden;
-    }
-
-    .video-wrapper iframe, .shorts-wrapper iframe {
+    .video-wrapper iframe {
       position: absolute;
       top: 0;
       left: 0;
@@ -115,15 +97,14 @@
       font-size: 14px;
       font-weight: 600;
       margin: 0;
-      color: var(--text-color);
+      color: #ffffff !important;
     }
 
-    /* Table Palmarès */
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
-      background: var(--card-bg);
+      background: var(--card-bg) !important;
       border-radius: 8px;
       overflow: hidden;
     }
@@ -131,26 +112,26 @@
     th, td {
       padding: 12px 16px;
       text-align: left;
-      border-bottom: 1px solid #334155;
+      border-bottom: 1px solid #333;
+      color: #ffffff !important;
     }
 
     th {
-      background-color: #334155;
-      color: var(--accent-color);
+      background-color: #2a2a2a !important;
+      color: var(--accent-color) !important;
     }
 
-    /* Footer */
     footer {
       margin-top: 60px;
       padding: 40px 20px;
-      background-color: #020617;
-      border-top: 1px solid #1e293b;
+      background-color: #000000 !important;
+      border-top: 2px solid var(--accent-color) !important;
       text-align: center;
     }
 
     footer h4 {
       margin-bottom: 15px;
-      color: var(--accent-color);
+      color: var(--accent-color) !important;
     }
 
     .footer-links {
@@ -161,14 +142,13 @@
     }
 
     .footer-links a {
-      color: #94a3b8;
+      color: #ffffff !important;
       text-decoration: none;
       font-weight: 500;
-      transition: color 0.2s;
     }
 
     .footer-links a:hover {
-      color: var(--accent-color);
+      color: var(--accent-color) !important;
     }
   </style>
 </head>
