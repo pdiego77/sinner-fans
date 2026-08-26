@@ -55,16 +55,47 @@
   fetch(rssUrl)
     .then(res => res.json())
     .then(data => {
-      // Trova i contenitori nell'HTML
-      const videoContainers = document.querySelectorAll('section');
-      
       if (data.items && data.items.length > 0) {
-        // Popola la sezione Video se presente
-        console.log("Video caricati con successo:", data.items);
+        
+        // Cerca il paragrafo con "Caricamento video..."
+        const paragraphs = document.querySelectorAll('p');
+        
+        paragraphs.forEach(p => {
+          if (p.textContent.includes('Caricamento video...')) {
+            const parent = p.parentElement;
+            parent.innerHTML = ''; // Rimuove la scritta di caricamento
+            
+            // Crea la griglia per i video
+            const videoGrid = document.createElement('div');
+            videoGrid.style.display = 'grid';
+            videoGrid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(280px, 1fr))';
+            videoGrid.style.gap = '20px';
+            videoGrid.style.marginTop = '20px';
+
+            // Prende fino a 4 video recenti
+            data.items.slice(0, 4).forEach(item => {
+              // Estrae l'ID del video dal link YouTube
+              const videoId = item.link.split('=')[1] || item.guid.split(':')[2];
+              
+              const card = document.createElement('div');
+              card.innerHTML = `
+                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                  <iframe src="https://www.youtube.com/embed/${videoId}" 
+                          style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
+                          allowfullscreen></iframe>
+                </div>
+                <h4 style="margin-top:10px;font-size:15px;color:#fff;">${item.title}</h4>
+              `;
+              videoGrid.appendChild(card);
+            });
+            
+            parent.appendChild(videoGrid);
+          }
+        });
       }
     })
     .catch(err => {
-      console.error("Errore nel caricamento dei video:", err);
+      console.error("Errore caricamento video lunghi:", err);
     });
 </script>
 </body>
