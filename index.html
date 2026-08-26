@@ -48,6 +48,24 @@
   <a href="https://www.tiktok.com/@diego_edit_tennis">TikTok</a>
 </div>
 </div>
+<script>
+  const channelID = "UCFJikxCQ1YbSVvOBZmKT1hw";
+  const rssUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://www.youtube.com/feeds/videos.xml?channel_id=' + channelID)}`;
 
+  fetch(rssUrl)
+    .then(res => res.json())
+    .then(data => {
+      // Trova i contenitori nell'HTML
+      const videoContainers = document.querySelectorAll('section');
+      
+      if (data.items && data.items.length > 0) {
+        // Popola la sezione Video se presente
+        console.log("Video caricati con successo:", data.items);
+      }
+    })
+    .catch(err => {
+      console.error("Errore nel caricamento dei video:", err);
+    });
+</script>
 </body>
 </html>
