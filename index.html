@@ -1,102 +1,256 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<!-- SEO & Anteprima Social (WhatsApp/Instagram/Telegram) -->
-<title>Diego Tennis Edit | Highlights & Sinner Edit</title>
-<meta name="description" content="Canale dedicato a Jannik Sinner, tennis ATP, clip emozionali e contenuti rapidi per i fan.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO & Anteprima Social (WhatsApp/Instagram/Telegram) -->
+  <title>Diego Tennis Edit | Highlights & Sinner Edit</title>
+  <meta name="description" content="Canale e community dedicata a Jannik Sinner, tennis ATP, highlights ed edit emozionali.">
 
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://calm-otter-5c5c04.netlify.app/">
-<meta property="og:title" content="Diego Tennis Edit">
-<meta property="og:description" content="Analisi, highlights ed edit dedicati a Jannik Sinner e al tennis ATP.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calm-otter-5c5c04.netlify.app/">
+  <meta property="og:title" content="Diego Tennis Edit">
+  <meta property="og:description" content="Analisi, highlights ed edit dedicati a Jannik Sinner e al tennis ATP.">
+
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-color: #f8fafc;
+      --accent-color: #38bdf8;
+      --accent-hover: #0284c7;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      border-bottom: 1px solid #334155;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--accent-color);
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #94a3b8;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      border-left: 4px solid var(--accent-color);
+      padding-left: 12px;
+    }
+
+    /* Griglie Video e Shorts */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .shorts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+
+    .video-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .shorts-wrapper {
+      position: relative;
+      padding-bottom: 177.77%; /* 9:16 Verticale */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-wrapper iframe, .shorts-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-title {
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+      color: var(--text-color);
+    }
+
+    /* Table Palmarès */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+      background: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #334155;
+    }
+
+    th {
+      background-color: #334155;
+      color: var(--accent-color);
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 60px;
+      padding: 40px 20px;
+      background-color: #020617;
+      border-top: 1px solid #1e293b;
+      text-align: center;
+    }
+
+    footer h4 {
+      margin-bottom: 15px;
+      color: var(--accent-color);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-color);
+    }
+  </style>
 </head>
 <body>
 
-<header>
+  <header>
     <h1>FORZA JANNIK! 🎾</h1>
-    <p>Sinner Fans Italia - Il tempio del numero 1</p>
-</header>
+    <p>Diego Tennis Edit - Analisi, Highlights ed Edit ATP</p>
+  </header>
 
-<div class="container">
-    <center><div class="ranking">ATP RANKING: #1 🇮🇹</div></center>
+  <div class="container">
     
-    <h2>🏆 Palmarès</h2>
+    <!-- Palmarès -->
+    <h2 class="section-title">🏆 Palmarès Jannik Sinner</h2>
     <table>
+      <thead>
         <tr><th>Anno</th><th>Torneo</th><th>Risultato</th></tr>
+      </thead>
+      <tbody>
         <tr><td>2024</td><td>US Open</td><td>Vincitore 🏆</td></tr>
         <tr><td>2024</td><td>Australian Open</td><td>Vincitore 🏆</td></tr>
         <tr><td>2024</td><td>Miami Open</td><td>Vincitore 🏆</td></tr>
+      </tbody>
     </table>
 
-    <h2>📺 Highlights Australian Open</h2>
-    <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/S_8m0o26tOE" allowfullscreen></iframe>
+    <!-- Ultimi Video dal Canale -->
+    <h2 class="section-title">📺 Ultimi Video</h2>
+    <div id="video-container" class="video-grid">
+      <p>Caricamento video dal canale...</p>
     </div>
 
-    <div class="social-section">
-        <h3>Segui la Community</h3>
-        <a href="https://www.instagram.com/janniksin/" target="_blank" class="btn btn-ig">Instagram Jannik</a>
-        <a href="https://x.com/janniksin" target="_blank" class="btn btn-x">Seguici su X</a>
+  </div>
+
+  <footer>
+    <h4>Diego Tennis Edit</h4>
+    <div class="footer-links">
+      <a href="https://www.youtube.com/channel/UCFJikxCQ1YbSVvOBZmKT1hw" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a href="https://www.instagram.com/diego_edit77/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      <a href="https://www.tiktok.com/@diego_edit_tennis" target="_blank" rel="noopener noreferrer">TikTok</a>
     </div>
-</div>
+    <p style="margin-top: 20px; font-size: 12px; color: #64748b;">© 2026 Diego Tennis Edit</p>
+  </footer>
 
-<div class="footer">
-    <div>
-  <h4>Canale</h4>
-  <a href="https://www.youtube.com/channel/UCFJikxCQ1YbSVvOBZmKT1hw" rel="noopener noreferrer" target="_blank">YouTube</a>
-  <a href="https://www.instagram.com/diego_edit77?igsh=/NXVvNzJyNW5nZm81">Instagram</a>
-  <a href="https://www.tiktok.com/@diego_edit_tennis">TikTok</a>
-</div>
-</div>
-<script>
-  const channelID = "UCFJikxCQ1YbSVvOBZmKT1hw";
-  const rssUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://www.youtube.com/feeds/videos.xml?channel_id=' + channelID)}`;
+  <!-- Script automatico per recuperare gli ultimi video da YouTube -->
+  <script>
+    const channelID = "UCFJikxCQ1YbSVvOBZmKT1hw";
+    const rssUrl = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent('https://www.youtube.com/feeds/videos.xml?channel_id=' + channelID)}`;
 
-  fetch(rssUrl)
-    .then(res => res.json())
-    .then(data => {
-      if (data.items && data.items.length > 0) {
+    fetch(rssUrl)
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('video-container');
         
-        // Cerca il paragrafo con "Caricamento video..."
-        const paragraphs = document.querySelectorAll('p');
-        
-        paragraphs.forEach(p => {
-          if (p.textContent.includes('Caricamento video...')) {
-            const parent = p.parentElement;
-            parent.innerHTML = ''; // Rimuove la scritta di caricamento
-            
-            // Crea la griglia per i video
-            const videoGrid = document.createElement('div');
-            videoGrid.style.display = 'grid';
-            videoGrid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(280px, 1fr))';
-            videoGrid.style.gap = '20px';
-            videoGrid.style.marginTop = '20px';
+        if (data.items && data.items.length > 0) {
+          container.innerHTML = ''; // Pulisce il testo "Caricamento video..."
 
-            // Prende fino a 4 video recenti
-            data.items.slice(0, 4).forEach(item => {
-              // Estrae l'ID del video dal link YouTube
-              const videoId = item.link.split('=')[1] || item.guid.split(':')[2];
-              
-              const card = document.createElement('div');
-              card.innerHTML = `
-                <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
-                  <iframe src="https://www.youtube.com/embed/${videoId}" 
-                          style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;" 
-                          allowfullscreen></iframe>
-                </div>
-                <h4 style="margin-top:10px;font-size:15px;color:#fff;">${item.title}</h4>
-              `;
-              videoGrid.appendChild(card);
-            });
+          // Prende fino a 4 video recenti
+          data.items.slice(0, 4).forEach(item => {
+            const videoId = item.link.split('=')[1] || item.guid.split(':')[2];
             
-            parent.appendChild(videoGrid);
-          }
-        });
-      }
-    })
-    .catch(err => {
-      console.error("Errore caricamento video lunghi:", err);
-    });
-</script>
+            const card = document.createElement('div');
+            card.className = 'video-card';
+            card.innerHTML = `
+              <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/${videoId}" allowfullscreen></iframe>
+              </div>
+              <h4 class="video-title">${item.title}</h4>
+            `;
+            container.appendChild(card);
+          });
+        } else {
+          container.innerHTML = '<p>Nessun video trovato al momento.</p>';
+        }
+      })
+      .catch(err => {
+        console.error("Errore nel caricamento del feed:", err);
+        document.getElementById('video-container').innerHTML = `
+          <p>Impossibile caricare i video in automatico.</p>
+          <a href="https://www.youtube.com/channel/UCFJikxCQ1YbSVvOBZmKT1hw" target="_blank" style="color: var(--accent-color);">Guarda i video direttamente su YouTube</a>
+        `;
+      });
+  </script>
+
 </body>
 </html>
